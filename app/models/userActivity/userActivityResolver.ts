@@ -41,6 +41,12 @@ export class UserActivityResolver {
     return result.acknowledged === true;
   }
 
+  @Mutation(() => Boolean)
+  async deletAllUserActivity() : Promise<boolean> {
+    const result = await UserActivityModel.deleteMany({});
+    return result.acknowledged === true;
+  }
+
  @FieldResolver((_type) => Board)
   async board(@Root() userActivity: UserActivity): Promise < Board > {
       console.log(userActivity, 'userActivity!');

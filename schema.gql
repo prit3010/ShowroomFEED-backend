@@ -25,6 +25,7 @@ type Mutation {
   createBoard(data: BoardInput!): Board!
   createShowroom(data: ShowroomInput!): Showroom!
   createUserActivity(data: UserActivityInput!): UserActivity!
+  deletAllUserActivity: Boolean!
   deleteBoard(id: String!): Boolean!
   deleteShowroom(id: String!): Boolean!
   deleteUserActivity(id: String!): Boolean!
